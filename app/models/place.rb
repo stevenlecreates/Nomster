@@ -1,6 +1,7 @@
 class Place < ActiveRecord::Base
 	belongs_to :user
 	has_many :comments
+	has_many :photos
 
 	geocoded_by :address
 	after_validation :geocode
@@ -13,3 +14,5 @@ class Place < ActiveRecord::Base
       self.comments.order("id ASC").last
  	end
 end
+
+
