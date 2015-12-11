@@ -95,7 +95,7 @@ function initMap() {
 <div class="clear"></div>
 <div class="col-xs-12 col-sm-6 booyah-box">
 <%= simple_form_for @photo, :url => place_photos_path(@place) do |f| %>
-  <%= photo.caption %>
+  <%= f.input :caption %>
   <%= f.submit "Add a Photo", :class => 'btn btn-primary' %>
 <% end %>
 
