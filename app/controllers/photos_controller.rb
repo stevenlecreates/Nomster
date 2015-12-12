@@ -1,6 +1,7 @@
 class PhotosController < ApplicationController
 	before_action :authenticate_user!
 	
+	
 
 	def create
 		@place = Place.find(params[:place_id])
@@ -11,7 +12,7 @@ class PhotosController < ApplicationController
 	private
 
 	def photo_params
-    params.require(:photo).permit(:caption, :place_id)
+    params.require(:photo).permit(:caption, :picture, :place_id)
   	end
 
 end
