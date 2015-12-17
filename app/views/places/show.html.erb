@@ -100,7 +100,7 @@ function initMap() {
 
 
 <!-- Photos Modal -->
-<div class="modal fade" id="photoModal" tabindex="-1" role="dialog" aria-labelledby="photoLabel">
+<div class="modal fade fancybox" id="photoModal" tabindex="-1" role="dialog" aria-labelledby="photoLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -127,9 +127,12 @@ function initMap() {
 </div>
 </div>
 
-<div class="photos">
+<div id="melding">
 <% @place.photos.each do |photo| %>
-  <%= image_tag photo.picture %>
-  <%= photo.caption %>
+  <%= link_to photo.picture.to_s, :class => 'fancybox', :rel => 'images' do %>
+  <%= image_tag photo.picture, :class => 'img-responsive' %><br />
+  <% end %>
+  <%= photo.caption %><br />
 <% end %>
 </div>
+

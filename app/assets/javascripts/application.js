@@ -15,3 +15,12 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require jquery
+//= require fancybox
+
+$(document).ready(function() {
+  $("a.fancybox").fancybox({
+  	
+  });
+});
+

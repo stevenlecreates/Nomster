@@ -1,4 +1,5 @@
 Nomster::Application.routes.draw do
+  get "example/show"
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -61,4 +62,6 @@ Nomster::Application.routes.draw do
     resources :photos, :only => :create
   end
   resources :users, :only => :show
+  resource :example, only: [:show], controller: :example
+  
 end
