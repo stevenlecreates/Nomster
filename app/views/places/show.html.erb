@@ -127,12 +127,12 @@ function initMap() {
 </div>
 </div>
 
-<div id="melding">
+
 <% @place.photos.each do |photo| %>
   <%= link_to photo.picture.to_s, :class => 'fancybox', :rel => 'images' do %>
   <%= image_tag photo.picture, :class => 'img-responsive' %><br />
   <% end %>
   <%= photo.caption %><br />
 <% end %>
-</div>
+
 
